@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --color-dark-blue: #0a2342;
+  --color-teal: #2ca6a4;
+  --color-cloud-blue: #e3f6fd;
+}
+
+body {
+  background: var(--color-dark-blue);
+  color: var(--color-cloud-blue);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-teal);
+}
+
+a {
+  color: var(--color-teal);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-cloud-blue);
+}
