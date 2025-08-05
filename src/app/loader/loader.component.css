@@ -5,6 +5,25 @@
   justify-content: center;
   height: 100vh;
   text-align: center;
+  min-height: 100vh;
+  width: 100vw;
+  background:
+    linear-gradient(135deg, rgba(104, 106, 109, 0.85) 0%, rgba(3, 19, 68, 0.844) 100%),
+    url('/assets/photos/photo-1754275047961-e2ed3624fda7.avif') center center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+.loader-content {
+  background: rgba(10, 35, 66, 0.85);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px rgba(10,35,66,0.18);
+  padding: 3.5rem 3rem 2.5rem 3rem;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .name-row {
@@ -17,7 +36,11 @@
 .loader-container h1 {
   margin-bottom: 0.2em;
   color: var(--teal, #2ca6a4);
-  font-size: 4.0rem;
+  font-family: "Google_Code", 'Segoe UI', Arial, sans-serif;
+  font-size: 5.2rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  text-shadow: 0 2px 16px rgba(10,35,66,0.18);
 }
 
 .pronunciation {
