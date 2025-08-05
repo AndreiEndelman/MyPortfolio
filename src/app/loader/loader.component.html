@@ -1,4 +1,9 @@
-<div class="loader-container">
-  <div class="loader"></div>
-  <p>Loading portfolio...</p>
+<div class="loader-container" (click)="continue()">
+  <div class="name-row">
+    <h1>Andrei Endelman</h1>
+    <span class="pronunciation">(ohn-dray)</span>
+  </div>
+  <div class="rotating-message">
+    <span [ngClass]="fadeState">{{ rotatingText }}</span>
+  </div>
 </div>

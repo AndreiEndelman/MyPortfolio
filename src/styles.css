@@ -25,3 +25,16 @@ a {
 a:hover {
   color: var(--color-cloud-blue);
 }
+
+@font-face {
+  font-family: 'Google_Code';
+  src: url('assets/Google_Sans_Code/GoogleSansCode-VariableFont_wght.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Google_Code';
+  src: url('assets/Google_Sans_Code/GoogleSansCode-Italic-VariableFont_wght.ttf');
+  font-weight: normal;
+  font-style: italic;
+}

@@ -1,0 +1,125 @@
+/* Bio section styles */
+.bio {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 220px;
+  background: rgba(227, 246, 253, 0.95);
+  color: var(--dark-blue, #0a2342);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(10, 35, 66, 0.08);
+  padding: 1.2rem 1rem 1rem 1rem;
+  z-index: 10;
+}
+
+.bio h3 {
+  margin-top: 0;
+  color: var(--teal, #2ca6a4);
+  font-size: 1.1em;
+}
+
+.bio p {
+  margin: 0.5em 0 0 0;
+  font-size: 1em;
+  line-height: 1.5;
+}
+/* Header styles */
+.header {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--cloud-blue, #e3f6fd);
+
+}
+
+.name-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header h1 {
+  margin-bottom: 0.2em;
+  color: var(--teal, #2ca6a4);
+  font-size: 2.5rem;
+}
+
+.pronunciation {
+  font-size: 1.1rem;
+  color: var(--cloud-blue, #e3f6fd);
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.rotating-message {
+  margin-top: 0.5em;
+  min-height: 2.2em;
+  font-size: 1.4rem;
+  color: var(--dark-blue, #0a2342);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: opacity 0.5s;
+}
+
+.rotating-message span {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.rotating-message span.ng-animating {
+  opacity: 0;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+.navbar a {
+  color: var(--teal, #2ca6a4);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: var(--dark-blue, #0a2342);
+}
+
+/* Intro section styles */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 700px;
+  background: rgba(227, 246, 253, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(10, 35, 66, 0.08);
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--teal, #2ca6a4);
+  background: #fff;
+}
+
+.intro h3 {
+  margin-top: 0;
+  color: var(--teal, #2ca6a4);
+}
+
+.intro p {
+  color: var(--dark-blue, #0a2342);
+  font-size: 1.1em;
+}
