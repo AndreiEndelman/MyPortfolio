@@ -1,15 +1,23 @@
+html {
+  scroll-behavior: smooth;
+}
 /* Layout */
 .homepage-layout {
   display: flex;
   min-height: 100vh;
-  background: var(--color-dark-blue, #0a2342);
+  background: var(--color-dark-blue, #072243);
   max-width: 1200px;
   margin: 0 auto;
   box-shadow: 0 0 32px 0 rgba(10,35,66,0.10);
+  position: relative;
 }
 
 /* Sidebar */
 .sidebar {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translateX(-600px); /* centers sidebar in 1200px layout */
   width: 320px;
   background: rgba(10, 35, 66, 0.98);
   color: var(--color-cloud-blue, #e3f6fd);
@@ -17,12 +25,13 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 3rem 2rem 2rem 2rem;
-  min-height: 100vh;
+  height: 85vh;
   box-shadow: 2px 0 24px 0 rgba(10,35,66,0.08);
-}
+  z-index: 100;
+  overflow-y: auto;}
 
 .sidebar-header h1 {
-  font-size: 2.6rem;
+  font-size: 2.3rem;
   font-weight: 900;
   margin: 0 0 0.2em 0;
   color: #fff;
@@ -67,7 +76,9 @@
 .sidebar-social {
   display: flex;
   gap: 1.2em;
-  margin-top: 2em;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  justify-content: normal;
 }
 .sidebar-social a {
   color: var(--color-cloud-blue, #e3f6fd);
@@ -82,12 +93,11 @@
 
 /* Main content */
 .main-content {
-  flex: 1;
+  margin-left: 360px;
   padding: 4rem 4rem 2rem 4rem;
   color: var(--color-cloud-blue, #e3f6fd);
   background: linear-gradient(120deg, rgba(10,35,66,0.98) 60%, rgba(44,166,164,0.12) 100%);
   max-width: 800px;
-  margin: 0 auto;
   min-width: 0;
 }
 .main-content h2 {

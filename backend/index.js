@@ -1,10 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
+app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
@@ -42,12 +44,7 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
-
-
-// Contact form route
+// Projects route
 app.post('/api/projects', async (req, res) => {
   try {
     const { title, description, image, link, github, tags } = req.body;
@@ -65,3 +62,4 @@ app.post('/api/projects', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+

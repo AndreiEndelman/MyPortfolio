@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, OnInit } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { Router } from '@angular/router';
 
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './loader.component.html',
   styleUrls: ['./loader.component.css']
 })
-export class LoaderComponent {
+export class LoaderComponent implements OnInit {
   messages = [
     'software engineer.',
     'full stack developer.',
@@ -19,8 +19,14 @@ export class LoaderComponent {
   private msgIndex = 0;
   fadeState: 'in' | 'out' = 'in';
 
+  constructor(private router: Router, private cdr: ChangeDetectorRef) {}
 
-  constructor(private router: Router, private cdr: ChangeDetectorRef) {
+  ngOnInit() {
+    // If already visited, skip loader
+    if (localStorage.getItem('visitedLoader')) {
+      this.router.navigate(['/home']);
+      return;
+    }
     this.startRotation();
   }
 
@@ -38,6 +44,7 @@ export class LoaderComponent {
   }
 
   continue() {
+    localStorage.setItem('visitedLoader', 'true');
     this.router.navigate(['/home']);
   }
 }
