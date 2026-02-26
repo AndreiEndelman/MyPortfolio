@@ -23,10 +23,7 @@ export class LoaderComponent implements OnInit {
 
   ngOnInit() {
     // If already visited, skip loader
-    if (localStorage.getItem('visitedLoader')) {
-      this.router.navigate(['/home']);
-      return;
-    }
+    
     this.startRotation();
   }
 
