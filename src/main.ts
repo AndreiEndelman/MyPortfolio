@@ -5,6 +5,6 @@ import { routes } from './app/app-routing.module';
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideRouter(routes)
+    provideRouter(routes) // standard router, no anchorScrolling needed
   ]
 }).catch(err => console.error(err));

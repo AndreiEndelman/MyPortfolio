@@ -5,13 +5,14 @@
     <div class="sidebar-header">
       <h1>Andrei Endelman</h1>
       <h2>Full Stack Engineer</h2>
-      <p class="sidebar-bio">I build accessible, pixel-perfect digital experiences for the web.</p>
+      <p class="sidebar-bio">I build elegant digital experiences, connecting people and technology.</p>
     </div>
-    <nav class="sidebar-nav">
-      <a class="active" href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-    </nav>
+   <nav class="sidebar-nav">
+  <a (click)="scrollTo('about')">About</a>
+  <a (click)="scrollTo('experience')">Experience</a>
+  <a (click)="scrollTo('projects')">Projects</a>
+  <a href="assets/resume.pdf" target="_blank">Resume</a>
+</nav>
     <div class="sidebar-social">
       <a href="https://GITHUB.COM/ANDREIENDELMAN" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
       <a href="https://www.linkedin.com/in/andrei-endelman-8504342a6/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
@@ -24,14 +25,18 @@
     <section id="about" class="about-section">
       <h2>About</h2>
       <p>
-        I'm a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.
-      </p>
-      <p>
-        Currently, I'm a Full Stack Engineer at <b>Your Company</b>, specializing in modern web technologies. I contribute to the creation and maintenance of UI components and backend services, ensuring our platform meets best practices for usability and accessibility.
-      </p>
-      <p>
-        In my spare time, I'm usually climbing, reading, or working on side projects.
-      </p>
+      I’m a senior at Florida International University studying Computer Science and Software Engineering, and I hold a degree in English from FIU. My background in English has equipped me with strong communication, analytical, and problem-solving skills, allowing me to approach technology not just as code, but as a way to create clear, human-centered solutions.
+    </p>
+    <p>
+      Before transitioning into tech, I spent 15+ years in fine dining and upscale hospitality at some of Miami’s most iconic restaurants, including MILA, which was recently named the #1 highest‑grossing independent restaurant in the United States. That experience taught me how to operate seamlessly under pressure, anticipate needs, and deliver exceptional experiences; skills I now bring to software development and project design.
+    </p>
+    <p>
+      Today, I channel the combination of technical knowledge, communication expertise, and customer-focused insight into building software that makes people’s lives easier and more connected. I have experience with full-stack development, RESTful APIs, and generative AI, gained through coursework as well as a summer internship at Tekin Software, where I worked on a variety of impactful projects from concept to deployment.
+    </p>
+    <p>
+      Outside of tech, I’m passionate about music and tabletop games. On my days off, you’ll probably find me jamming out with close friends or at a local game store turning cards sideways.
+      <img src="assets/photos/Magic-card.webp" alt="MTG Card Icon" class="mtg-icon">
+    </p>
     </section>
     <section id="experience" class="experience-section">
       <h2>Experience</h2>
