@@ -411,3 +411,99 @@ html {
 .fade-in-item.visible h2::after {
   width: 100%;
 }
+
+/* ══════════════════════════════════════
+   MOBILE / RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Stack layout vertically */
+  .homepage-layout {
+    flex-direction: column;
+  }
+
+  /* Sidebar becomes a top header */
+  .sidebar {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: auto;
+    padding: 1.5rem 1.2rem 1rem 1.2rem;
+    border-bottom: 1px solid rgba(44, 166, 164, 0.15);
+  }
+
+  .sidebar-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .sidebar-header h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+  }
+
+  .sidebar-bio {
+    display: none; /* hide long bio text in collapsed header */
+  }
+
+  /* Nav links go horizontal */
+  .sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5em 1.2em;
+    margin-bottom: 1em;
+  }
+
+  .sidebar-nav a {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    padding-left: 0;
+    padding-bottom: 0.2em;
+    font-size: 0.95em;
+  }
+
+  .sidebar-nav a.active,
+  .sidebar-nav a:hover {
+    border-left: none;
+    border-bottom: 2px solid var(--color-teal, #2ca6a4);
+  }
+
+  .sidebar-social {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
+
+  /* Main content takes full width */
+  .main-content {
+    margin-left: 0;
+    padding: 1.5rem 1.2rem;
+    max-width: 100%;
+  }
+
+  /* Experience: stack dates above details */
+  .experience-item {
+    flex-direction: column;
+    gap: 0.4em;
+  }
+
+  .exp-dates {
+    min-width: unset;
+    font-size: 0.92em;
+  }
+
+  /* Project cards: stack image above text */
+  .project-mid {
+    flex-direction: column;
+  }
+
+  .project-screenshot {
+    width: 100%;
+    min-width: unset;
+    max-height: 200px;
+  }
+
+  /* Disable horizontal hover slide on touch */
+  .experience-item:hover,
+  .project-item:hover {
+    transform: none;
+  }
+}
