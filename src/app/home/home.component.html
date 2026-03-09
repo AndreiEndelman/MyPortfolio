@@ -8,9 +8,9 @@
       <p class="sidebar-bio">I build elegant digital experiences, connecting people and technology.</p>
     </div>
    <nav class="sidebar-nav">
-  <a (click)="scrollTo('about')">About</a>
-  <a (click)="scrollTo('experience')">Experience</a>
-  <a (click)="scrollTo('projects')">Projects</a>
+  <a (click)="scrollTo('about')" [class.active]="activeSection === 'about'">About</a>
+  <a (click)="scrollTo('experience')" [class.active]="activeSection === 'experience'">Experience</a>
+  <a (click)="scrollTo('projects')" [class.active]="activeSection === 'projects'">Projects</a>
   <a href="assets/resume.pdf" target="_blank">Resume</a>
 </nav>
     <div class="sidebar-social">
@@ -22,7 +22,7 @@
     </div>
   </aside>
   <main class="main-content">
-    <section id="about" class="about-section">
+    <section id="about" class="about-section fade-in-item">
       <h2>About</h2>
       <p>
       I’m a senior at Florida International University studying Computer Science and Software Engineering, and I hold a degree in English from FIU. My background in English has equipped me with strong communication, analytical, and problem-solving skills, allowing me to approach technology not just as code, but as a way to create clear, human-centered solutions.
@@ -38,9 +38,9 @@
       <img src="assets/photos/Magic-card.webp" alt="MTG Card Icon" class="mtg-icon">
     </p>
     </section>
-    <section id="experience" class="experience-section">
+    <section id="experience" class="experience-section fade-in-item">
       <h2>Experience</h2>
-      <div class="experience-item">
+      <div class="experience-item fade-in-item">
         <div class="exp-dates">May 2025 — August 2025</div>
         <div class="exp-details">
           <b>Full-Stack Intern · Tekin Software</b>
@@ -54,20 +54,30 @@
       </div>
       <!-- Add more experience items as needed -->
     </section>
-    <section id="projects" class="projects-section">
+    <section id="projects" class="projects-section fade-in-item">
       <h2>Projects</h2>
-      <div class="project-item">
-        <b>Portfolio Website</b>
-        <p>A modern, responsive portfolio built with Angular and Node.js.</p>       
+      <div class="project-item fade-in-item">
+        <div class="project-header">
+          <b>DuelMeet — Location-aware TCG Meetup Platform</b>
+          <a href="https://duel-meet.vercel.app" target="_blank" class="project-ext-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Site</a>
+        </div>
+        <div class="project-mid">
+          <img src="assets/photos/duel%20meet%20home.png" alt="DuelMeet screenshot" class="project-screenshot">
+          <p>Social platform for TCG players to find and host local games. Features location-based discovery via MongoDB geospatial queries, real-time messaging, friend &amp; reputation systems, Google Places integration, and transactional email. Deployed as a PWA with Capacitor-ready iOS/Android builds; backend on Railway.</p>
+        </div>
         <div class="exp-tags">
-          <span>Angular</span><span>Express</span><span>MongoDB</span>
+          <span>Angular</span><span>Ionic</span><span>Node.js</span><span>MongoDB</span><span>Capacitor</span>
         </div>
       </div>
-      <div class="project-item">
-         <B>Task-Manager Application</B>
-        <p>Built a task-manager application utilizing MEAN stack, fully functional and deployed via vercel. Contains Rest APIS, Authorization guards, hash guards. It is response and works well idk! You can view the site
-          <a href="https://angular-task-app-seven.vercel.app/">here</a>
-        </p>
+      <div class="project-item fade-in-item">
+        <div class="project-header">
+          <b>Task-Manager Application</b>
+          <a href="https://angular-task-app-seven.vercel.app/" target="_blank" class="project-ext-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Site</a>
+        </div>
+        <div class="project-mid">
+          <img src="assets/photos/Task%20manager.png" alt="Task Manager screenshot" class="project-screenshot">
+          <p>Full-stack task manager built with the MEAN stack, featuring REST APIs, JWT auth, and authorization guards. Deployed on Vercel.</p>
+        </div>
         <div class="exp-tags">
           <span>Angular</span><span>Express</span><span>MongoDB</span>
         </div>

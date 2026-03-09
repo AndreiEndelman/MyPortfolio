@@ -117,9 +117,15 @@ html {
 }
 
 /* Experience & Projects */
-.experience-item, .project-item {
+.experience-item {
   display: flex;
   gap: 2.5em;
+  margin-bottom: 2.2em;
+}
+.project-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
   margin-bottom: 2.2em;
 }
 .exp-dates {
@@ -286,4 +292,122 @@ html {
 .mtg-icon:hover {
   transform: rotate(90deg);  /* rotate 90 degrees sideways */
   cursor: pointer;
+}
+
+/* ── Project card layout ── */
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 0.8em;
+}
+
+.project-header b {
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.project-ext-link {
+  font-size: 0.85em;
+  color: var(--color-teal, #2ca6a4);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  opacity: 0.8;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.project-ext-link:hover {
+  opacity: 1;
+}
+
+.project-mid {
+  display: flex;
+  gap: 1.5em;
+  align-items: flex-start;
+  margin-bottom: 0.8em;
+}
+
+.project-screenshot {
+  width: 220px;
+  min-width: 220px;
+  border-radius: 0.5em;
+  object-fit: cover;
+  border: 1px solid rgba(44, 166, 164, 0.2);
+  transition: border-color 0.22s ease;
+}
+
+.project-item:hover .project-screenshot {
+  border-color: rgba(44, 166, 164, 0.6);
+}
+
+.project-mid p {
+  flex: 1;
+  margin: 0;
+}
+
+/* ── Scroll entrance animations ── */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-item {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.fade-in-item.visible {
+  animation: fadeSlideUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger cards within sections */
+.fade-in-item.visible:nth-child(2) { animation-delay: 0.08s; }
+.fade-in-item.visible:nth-child(3) { animation-delay: 0.16s; }
+.fade-in-item.visible:nth-child(4) { animation-delay: 0.24s; }
+
+/* ── Card hover lift ── */
+.experience-item, .project-item {
+  border-radius: 0.75em;
+  padding: 1.2em 1em;
+  margin-left: -1em;
+  transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease, border-left 0.22s ease;
+  border-left: 3px solid transparent;
+}
+
+.experience-item:hover, .project-item:hover {
+  background: rgba(44, 166, 164, 0.07);
+  transform: translateX(6px);
+  box-shadow: 0 4px 24px rgba(44, 166, 164, 0.1);
+  border-left: 3px solid var(--color-teal, #2ca6a4);
+}
+
+/* ── Section heading animated underline ── */
+.main-content h2 {
+  display: inline-block;
+  position: relative;
+}
+
+.main-content h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: var(--color-teal, #2ca6a4);
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-in-item.visible h2::after {
+  width: 100%;
 }
