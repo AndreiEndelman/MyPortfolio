@@ -344,6 +344,19 @@ html {
   border-color: rgba(44, 166, 164, 0.6);
 }
 
+.project-video {
+  width: 220px;
+  min-width: 220px;
+  border-radius: 0.5em;
+  border: 1px solid rgba(44, 166, 164, 0.2);
+  transition: border-color 0.22s ease;
+  object-fit: cover;
+}
+
+.project-item:hover .project-video {
+  border-color: rgba(44, 166, 164, 0.6);
+}
+
 .project-mid p {
   flex: 1;
   margin: 0;
