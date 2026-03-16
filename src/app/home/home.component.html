@@ -63,13 +63,13 @@
         </div>
         <div class="project-mid">
           <img src="assets/photos/duel%20meet%20home.png" alt="DuelMeet screenshot" class="project-screenshot">
-          <video class="project-video" controls muted playsinline>
-            <source src="assets/photos/DuelMeetDemo.mp4" type="video/mp4">
-          </video>
           <p>Social platform for TCG players to find and host local games. Features location-based discovery via MongoDB geospatial queries, real-time messaging, friend &amp; reputation systems, Google Places integration, and transactional email. Deployed as a PWA with Capacitor-ready iOS/Android builds; backend on Railway.</p>
         </div>
-        <div class="exp-tags">
-          <span>Angular</span><span>Ionic</span><span>Node.js</span><span>MongoDB</span><span>Capacitor</span>
+        <div class="project-footer">
+          <div class="exp-tags">
+            <span>Angular</span><span>Ionic</span><span>Node.js</span><span>MongoDB</span><span>Capacitor</span>
+          </div>
+          <button class="demo-btn" (click)="openVideoModal()"><i class="fa-solid fa-circle-play"></i> Watch Demo</button>
         </div>
       </div>
       <div class="project-item fade-in-item">
@@ -89,3 +89,15 @@
     </section>
   </main>
 </div>
+
+<!-- Video modal -->
+@if (showVideoModal) {
+  <div class="video-modal-overlay" (click)="closeVideoModal()">
+    <div class="video-modal-box" (click)="$event.stopPropagation()">
+      <button class="video-modal-close" (click)="closeVideoModal()"><i class="fa-solid fa-xmark"></i></button>
+      <video controls autoplay playsinline class="video-modal-player">
+        <source src="assets/photos/DuelMeetDemo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+}

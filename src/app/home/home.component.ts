@@ -8,6 +8,7 @@ import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 })
 export class HomeComponent implements AfterViewInit, OnDestroy {
   activeSection: string = 'about';
+  showVideoModal = false;
   private readonly observers: IntersectionObserver[] = [];
 
   ngAfterViewInit() {
@@ -43,6 +44,16 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
 
   ngOnDestroy() {
     this.observers.forEach(o => o.disconnect());
+  }
+
+  openVideoModal() {
+    this.showVideoModal = true;
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeVideoModal() {
+    this.showVideoModal = false;
+    document.body.style.overflow = '';
   }
 
   scrollTo(sectionId: string) {
